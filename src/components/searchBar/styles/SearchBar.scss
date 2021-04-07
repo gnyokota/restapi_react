@@ -1,0 +1,48 @@
+@import "../../../styles/colors";
+
+.searchBar {
+  text-align: center;
+  display: flex;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  background-color: $whiteish;
+  border-radius: 10px;
+  width: 60vw;
+
+  &__input {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.3rem;
+    margin: 0.25rem;
+    border: none;
+    background-color: $whiteish;
+    color: $blue3;
+
+    &::placeholder {
+      color: $blue2;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn {
+    margin: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    background-color: $blue3;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $blue2;
+      transition: 0.5s ease-in-out;
+    }
+
+    i {
+      color: $blue1;
+      font-size: 1rem;
+    }
+  }
+}

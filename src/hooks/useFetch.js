@@ -1,5 +1,5 @@
 // import libraries:
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function useFetch(url) {
   const [countries, setCountries] = useState("");
@@ -17,7 +17,7 @@ function useFetch(url) {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [url]);
 
   return [countries, error];
 }

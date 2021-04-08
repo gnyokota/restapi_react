@@ -46,3 +46,18 @@
     }
   }
 }
+
+//iPhone X
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .searchBar {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+
+    &__input {
+      &::placeholder {
+        text-align: center;
+      }
+    }
+  }
+}

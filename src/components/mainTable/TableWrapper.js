@@ -11,9 +11,10 @@ function TableWrapper({ countries }) {
   return (
     <Table responsive>
       <TableHeader />
-      <tbody>
-        {countries &&
-          countries.map((country) => (
+      {/* I cannot have a empty tbody  */}
+      {countries ? (
+        <tbody>
+          {countries.map((country) => (
             <TableRow
               key={country.alpha2Code}
               flagUrl={country.flag}
@@ -23,7 +24,16 @@ function TableWrapper({ countries }) {
               region={country.region}
             />
           ))}
-      </tbody>
+        </tbody>
+      ) : (
+        <tbody>
+          <tr>
+            <td colSpan="5">
+              <h1>Loading...</h1>
+            </td>
+          </tr>
+        </tbody>
+      )}
     </Table>
   );
 }

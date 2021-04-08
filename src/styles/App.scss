@@ -7,9 +7,11 @@
   padding: 1rem 3rem;
   border-radius: 10px;
   background-color: white;
+}
 
-  h1 {
-    color: $blue2;
-    text-align: center;
+//iPhone X
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .app-wrapper {
+    padding: 1rem 0.5rem;
   }
 }

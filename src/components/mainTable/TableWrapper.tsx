@@ -4,10 +4,11 @@ import Table from "react-bootstrap/Table";
 // import components:
 import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
+import { PropsWrapper } from "../../types/types";
 // import styles:
 import "./styles/Table.scss";
 
-function TableWrapper({ countries }) {
+const TableWrapper = ({ countries }: PropsWrapper) => {
   return (
     <Table responsive>
       <TableHeader />
@@ -17,7 +18,7 @@ function TableWrapper({ countries }) {
           {countries.map((country) => (
             <TableRow
               key={country.alpha2Code}
-              flagUrl={country.flag}
+              flag={country.flag}
               name={country.name}
               population={country.population}
               languages={country.languages}
@@ -28,7 +29,7 @@ function TableWrapper({ countries }) {
       ) : (
         <tbody>
           <tr>
-            <td colSpan="5">
+            <td colSpan={5}>
               <h1>Loading...</h1>
             </td>
           </tr>
@@ -36,6 +37,6 @@ function TableWrapper({ countries }) {
       )}
     </Table>
   );
-}
+};
 
 export default TableWrapper;

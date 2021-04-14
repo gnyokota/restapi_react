@@ -1,9 +1,14 @@
 // import libraries:
 import { useState, useEffect } from "react";
+//import components: 
+import {CountriesI} from '../types/types'; 
 
-function useFetch(url) {
-  const [countries, setCountries] = useState("");
-  const [error, setError] = useState("");
+
+
+function useFetch(url:string):[CountriesI[], Error | null]{
+
+  const [countries, setCountries] = useState([]);
+  const [error, setError] = useState(null);
 
   const fetchData = async () => {
     try {

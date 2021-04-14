@@ -1,9 +1,11 @@
 // import libraries:
 import React from "react";
+//import components:
+import { PropsSearch } from "../../types/types";
 // import styles:
 import "./styles/SearchBar.scss";
 
-function SearchBar({ search, handleChange, handleClick }) {
+const SearchBar = ({ search, handleChange, handleClick }: PropsSearch) => {
   return (
     <div className="searchBar">
       <input
@@ -19,6 +21,6 @@ function SearchBar({ search, handleChange, handleClick }) {
       </button>
     </div>
   );
-}
+};
 
 export default SearchBar;

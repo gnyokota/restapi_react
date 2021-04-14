@@ -1,7 +1,5 @@
 // import libraries:
 import React from "react";
-// import components:
-// import styles:
 
 function TableHeader() {
   return (
